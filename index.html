@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/play.js"></script>
+   
+    <title>MusicPlay</title>
+</head>
+<body>
+		<audio >
+			<source src="music/265_非你不爱.mp3" title="非你不爱">
+			<source src="music/给我一个理由忘记.mp3" title="给我一个理由忘记">
+			<source src="music/有多少爱可以重来.mp3" title="有多少爱可以重来">
+		</audio>
+        <div id="maxPic">
+                    
+        </div>
+		<div id="play">
+    		<div id="musicPanel">
+    			<div id="musicPhoto">
+    				
+    			</div>
+               
+    			<div id="musicShow">
+    				<div id="title"><span id="playtitle">Title</span></div>
+    				<div id="pmgressbar"> <div id="process"></div><div id="nowtime"></div><div id="alltime"></div></div>
+    				<div id="playStyle">
+    					<div id="star">
+    						<i id="1" class="fa fa-star-o" onclick="light(1)"></i>
+    						<i id="2" class="fa fa-star-o" onclick="light(2)"></i>
+    						<i id="3" class="fa fa-star-o" onclick="light(3)"></i>
+    						<i id="4" class="fa fa-star-o" onclick="light(4)"></i>
+    						<i id="5" class="fa fa-star-o" onclick="light(5)"></i>
+    					</div>
+    					<div id="random" onclick="randomclick()"><i class="fa fa-random"></i></div>
+    					<div id="onlyOne" onclick="loopmuisc()"><i class="fa fa-repeat"></i></div>
+    					<div id="list" onclick="showList()"><i class="fa fa-align-justify"></i></div>
+    				</div>
+    			</div>
+    		</div>
+    		<div id="musicControl">
+    			<div id="backward"><i class="fa fa-step-backward"></i></div>
+    			<div id="pause" onclick="play()"><i id="iplay" class="fa fa-play"></i><i id="ipause" class="fa fa-pause"></i></div>
+    			<div id="stop" onclick="pause()"><i class="fa fa-stop"></i></div>
+    			<div id="forward"><i class="fa fa-step-forward"></i></div>
+    			<div id="voice" onclick="voiceControl()"><i class="fa fa-volume-off"></i><i class="fa fa-volume-down"></i><i class="fa fa-volume-up"></i></div>
+    			<div id="voicebar"><input id="voicerange" min="0" max="1" step="0.1" type="range" onchange="setvolume()"></div>
+    			<div id="heart" onclick="like()"><i class="fa fa-heart"></i></div>
+    			<div id="add" onclick="addmusic()"><i class="fa fa-plus"></i></div>
+    		</div>
+    		<div id="inputsrc"><input id="input" type="text" onkeydown="replacesrc(event.keyCode||event.which)">
+    			<i class="fa fa-arrow-circle-o-right" onclick="replacesrc"></i>
+    			<i class="fa fa-question-circle" onclick=""></i>
+    		</div>
+    </div>
+    <div id="musicList">
+    	<ul>
+    		<li id="title1" onclick="playMusic(1)"><a>非你不爱</a></li>
+    		<li id="title2" onclick="playMusic(2)"><a>给我一个理由忘记</a></li>
+    		<li id="title3" onclick="playMusic(3)"><a>有多少爱可以重来</a></li>
+    	</ul>
+    </div>
+
+   
+</body>
+</html>
